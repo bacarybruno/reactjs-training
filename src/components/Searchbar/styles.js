@@ -1,4 +1,11 @@
 const styles = {
+    root: {
+        padding: '2px 4px',
+        display: 'flex',
+        alignItems: 'center',
+        minWidth: 300,
+        width: '40%',
+    },
     container: {
         height: 300,
         backgroundImage: 'url(https://ssl.gstatic.com/support/content/images/static/homepage_header_background.svg)',
@@ -6,16 +13,11 @@ const styles = {
         backgroundRepeat: 'no-repeat',
         marginTop: 30,
     },
-    root: {
-        padding: '2px 4px',
-        display: 'flex',
-        alignItems: 'center',
-        width: 500,
-    },
     input: {
         marginLeft: 8,
         flex: 1,
         paddingLeft: 15,
+        borderRadius: 8,
     },
     iconButton: {
         padding: 10,

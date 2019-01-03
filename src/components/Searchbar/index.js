@@ -19,12 +19,12 @@ const Searchbar = (props) => {
             className={classes.container}
         >
             <Paper className={classes.root} elevation={1}>
-                <InputBase onChange={(event) => console.log(event.target.value)} className={classes.input} placeholder="Search News" />
-                <IconButton onClick={() => console.log('yes')} className={classes.iconButton} aria-label="Search">
+                <InputBase onChange={props.onChange} className={classes.input} placeholder="Search News" />
+                <IconButton onClick={props.onSearch} className={classes.iconButton} aria-label="Search">
                     <SearchIcon />
                 </IconButton>
                 <Divider className={classes.divider} />
-                <IconButton color="primary" className={classes.iconButton} aria-label="Directions">
+                <IconButton color="primary" className={classes.iconButton} aria-label="Filter">
                     <FilterIcon />
                 </IconButton>
             </Paper>

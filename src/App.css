@@ -1,0 +1,9 @@
+.App {
+    margin-bottom: 50px;
+}
+
+.pagination {
+    display: flex; /* https://flexboxfroggy.com/ */
+    justify-content: center;
+    align-items: center;
+}
