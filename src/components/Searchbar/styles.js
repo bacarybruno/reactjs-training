@@ -1,8 +1,12 @@
 const styles = {
-    root: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
+    container: {
+        height: 300,
+        backgroundImage: 'url(https://ssl.gstatic.com/support/content/images/static/homepage_header_background.svg)',
+        backgroundPosition: '50%',
+        backgroundRepeat: 'no-repeat',
         marginTop: 30,
+    },
+    root: {
         padding: '2px 4px',
         display: 'flex',
         alignItems: 'center',
@@ -11,6 +15,7 @@ const styles = {
     input: {
         marginLeft: 8,
         flex: 1,
+        paddingLeft: 15,
     },
     iconButton: {
         padding: 10,
