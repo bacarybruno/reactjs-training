@@ -4,6 +4,7 @@ import Pagination from "material-ui-flat-pagination";
 import Header from '../../components/Header';
 import Searchbar from '../../components/Searchbar';
 import ArticleCard from '../../components/ArticleCard';
+import './styles.css';
 
 class Home extends Component {
     state = {
@@ -58,7 +59,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="Home">
+            <div className="home">
                 <Header label="Home" />
                 {this.state.loading === true && <LinearProgress color="secondary" />}
                 <Searchbar onChange={this.onQueryChange} onSearch={this.newSearch} />

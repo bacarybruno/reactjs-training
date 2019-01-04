@@ -11,7 +11,7 @@ const Header = (props) => {
                     {props.label}
                 </Typography>
                 <IconButton color="inherit">
-                  <SettingsIcon />
+                    <SettingsIcon />
                 </IconButton>
             </Toolbar>
         </AppBar>

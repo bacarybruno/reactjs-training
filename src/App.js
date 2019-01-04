@@ -18,8 +18,8 @@ const App = () => (
     <div>
       <MuiThemeProvider theme={theme}>
         <Switch>
-          <Route path="/home" component={HomeComponent} />
-          <Route path="/settings" component={SettingsComponent} />
+          <Route exact path="/home" component={HomeComponent} />
+          <Route exact path="/settings" component={SettingsComponent} />
           <Redirect to="/home" />
         </Switch>
       </MuiThemeProvider>

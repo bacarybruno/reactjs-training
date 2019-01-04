@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 class Settings extends Component {
     render() {
         return (
-            <div className="Settings">
+            <div className="settings">
                 <Header label="Settings" />
             </div>
         );
