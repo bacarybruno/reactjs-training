@@ -7,8 +7,11 @@ import SettingsComponent from './pages/Settings';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#2196f3'
+      main: '#FF4A00'
     },
+    secondary: {
+      main: '#2196f3'
+    }
   },
 });
 

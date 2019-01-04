@@ -1,10 +1,14 @@
-const styles = {
+const styles = (theme) => ({
     root: {
         padding: '2px 4px',
         display: 'flex',
         alignItems: 'center',
-        minWidth: 300,
-        width: '40%',
+        [theme.breakpoints.up('md')]: {
+            width: 520,
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     container: {
         height: 300,
@@ -12,6 +16,11 @@ const styles = {
         backgroundPosition: '50%',
         backgroundRepeat: 'no-repeat',
         marginTop: 30,
+        paddingLeft: 16,
+        paddingRight: 16,
+    },
+    title: {
+        marginBottom: '26px',
     },
     input: {
         marginLeft: 8,
@@ -27,6 +36,6 @@ const styles = {
         height: 28,
         margin: 4,
     },
-};
+});
 
 export default styles;

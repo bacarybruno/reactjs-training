@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, LinearProgress } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Pagination from "material-ui-flat-pagination";
 import Header from '../../components/Header';
 import Searchbar from '../../components/Searchbar';
@@ -30,6 +30,10 @@ class Home extends Component {
         });
     }
 
+    componentDidMount() {
+        console.log(this.props);
+    }
+
     onQueryChange = (event) => {
         this.setState({ query: event.target.value });
     }
@@ -53,16 +57,24 @@ class Home extends Component {
     }
 
     onNextPage = (_, offset) => {
+        window.scrollTo(0, 0);
         const page = (offset / this.state.pageSize) + 1;
         this.setState({ page: page }, this.onSearch);
+    }
+
+    onPress = (event) => {
+        if (event.key === 'Enter') this.newSearch();
+    }
+
+    navigateTo = (route) => {
+        // this.props.history.push(route);
     }
 
     render() {
         return (
             <div className="home">
-                <Header label="Home" />
-                {this.state.loading === true && <LinearProgress color="secondary" />}
-                <Searchbar onChange={this.onQueryChange} onSearch={this.newSearch} />
+                <Header label="Home" loading={this.state.loading} onSettingsPress={() => this.navigateTo('/settings')} />
+                <Searchbar onChange={this.onQueryChange} onPress={this.onPress} onSearch={this.newSearch} />
                 <Grid container justify="center">
                     {this.state.results.map((item, index) => (
                         <ArticleCard

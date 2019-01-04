@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 import classnames from 'classnames';
@@ -12,7 +12,7 @@ import {
 } from '@material-ui/icons';
 
 
-class ArticleCard extends React.Component {
+class ArticleCard extends Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
