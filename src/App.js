@@ -1,7 +1,6 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import './App.css';
 import HomeComponent from './pages/Home';
 import SettingsComponent from './pages/Settings';
 
