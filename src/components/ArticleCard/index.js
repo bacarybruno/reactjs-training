@@ -8,7 +8,7 @@ import {
   CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography
 } from '@material-ui/core';
 import {
-  Favorite as FavoriteIcon, Share as ShareIcon, ExpandMore as ExpandMoreIcon, MoreVert as MoreVertIcon
+  Favorite as FavoriteIcon, Web as WebIcon, ExpandMore as ExpandMoreIcon, MoreVert as MoreVertIcon
 } from '@material-ui/icons';
 
 
@@ -20,12 +20,17 @@ class ArticleCard extends React.Component {
   };
 
   truncate = (string, n) => {
+    if (!string) return "";
     return (string.length > n) ? string.substr(0, n - 1) + '...' : string;
+  };
+
+  openUrl = (url) => {
+    window.open(url, '_blank');
   };
 
   render() {
     const { classes } = this.props;
-    const { title, date, image, summary, text } = this.props;
+    const { title, date, image, summary, text, url } = this.props;
     return (
       <Card className={classes.card}>
         <CardHeader
@@ -34,12 +39,12 @@ class ArticleCard extends React.Component {
               <MoreVertIcon />
             </IconButton>
           }
-          title={this.truncate(title, 50)}
+          title={this.truncate(title, 45)}
           subheader={<Moment fromNow>{date}</Moment>}
         />
         <CardMedia
           className={classes.media}
-          image={image}
+          image={image || "http://salmson_preprod.lnet.fr/fileadmin/templates/site/images/actualites1.jpg"}
           title="Image"
         />
         <CardContent>
@@ -49,8 +54,8 @@ class ArticleCard extends React.Component {
           <IconButton aria-label="Add to favorites">
             <FavoriteIcon />
           </IconButton>
-          <IconButton aria-label="Share">
-            <ShareIcon />
+          <IconButton aria-label="Web" onClick={() => this.openUrl(url)}>
+            <WebIcon />
           </IconButton>
           <IconButton
             className={classnames(classes.expand, {

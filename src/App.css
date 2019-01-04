@@ -3,6 +3,8 @@
 }
 
 .pagination {
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex; /* https://flexboxfroggy.com/ */
     justify-content: center;
     align-items: center;
