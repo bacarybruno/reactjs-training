@@ -1,3 +1,15 @@
+<h1 align="center">Welcome to reactjs-training 👋</h1>
+
+> A beginner's project made to teach reactjs to a group of students to help them get started on the framework.
+
+**Web UI**
+
+[![Web UI](https://github.com/bacarybruno/reactjs-training/blob/master/screenshots/home.png)](https://github.com/bacarybruno/reactjs-training/blob/master/screenshots/home.png)
+
+**Mobile UI**
+
+[![MMobile UI](https://github.com/bacarybruno/reactjs-training/blob/master/screenshots/mobile-ui.png)](https://github.com/bacarybruno/reactjs-training/blob/master/screenshots/mobile-ui.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
